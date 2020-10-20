@@ -11,6 +11,7 @@ def create
 end
 
 def checked
+
   post = Post.find(params[:id])
   if post.checked
     post.update(checked: false)
@@ -18,7 +19,7 @@ def checked
     post.update(checked: true)
   end
 
-  item = Post.find(paramas[:id])
+  item = Post.find(params[:id])
   render json: { post: item }
 end
 
